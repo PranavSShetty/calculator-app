@@ -66,6 +66,8 @@ function App() {
   };
 
   const handleEquals = () => {
+    if (waitingForOperand) return;
+
     const inputValue = parseFloat(display);
 
     if (previousValue !== null && operation) {
